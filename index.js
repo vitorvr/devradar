@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const routes = require('./routes/DevRoutes');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -18,5 +19,6 @@ mongoose.connect(mongodbUrl, mongodbConnOpts);
 app.use(express.json());
 app.use(cors());
 app.use(routes);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => console.log(`Server listening on port ${port}...`));

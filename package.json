@@ -10,6 +10,13 @@
     "mongoose": "^5.8.9"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "client-install": "npm install --prefix frontend",
+    "start": "yarn index.js",
+    "server": "nodemon index.js",
+    "start-client": "yarn --cwd frontend start",
+    "dev": "concurrently \"yarn server\" \"yarn start-client\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2"
   }
 }

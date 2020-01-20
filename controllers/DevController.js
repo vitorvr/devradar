@@ -9,7 +9,7 @@ module.exports = {
     let dev = await Dev.findOne({ github_username });
 
     if (dev) {
-      return res.status(500).json({ message: 'User Already Exists' });
+      return res.status(400).json({ message: 'User Already Exists' });
     }
 
     const githubUserResponse = await axios.get(

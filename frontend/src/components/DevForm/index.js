@@ -37,7 +37,7 @@ const DevForm = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="input-block">
-        <label htmlFor="github_username">Github username</label>
+        <label htmlFor="github_username">Github User</label>
         <input
           name="github_username"
           id="github_username"
@@ -47,7 +47,7 @@ const DevForm = ({ onSubmit }) => {
         />
       </div>
       <div className="input-block">
-        <label htmlFor="techs">Technologies</label>
+        <label htmlFor="techs">Technologies (comma separated)</label>
         <input
           name="techs"
           id="techs"

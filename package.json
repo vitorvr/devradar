@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": "Vitor Vianna",
   "dependencies": {
     "axios": "^0.19.1",
     "cors": "^2.8.5",
@@ -10,10 +11,11 @@
     "mongoose": "^5.8.9"
   },
   "scripts": {
-    "client-install": "npm install --prefix frontend",
+    "client-install": "yarn --cwd frontend",
+    "start-client": "yarn --cwd frontend start",
+    "build-client": "yarn --cwd frontend build",
     "start": "yarn index.js",
     "server": "nodemon index.js",
-    "start-client": "yarn --cwd frontend start",
     "dev": "concurrently \"yarn server\" \"yarn start-client\""
   },
   "devDependencies": {

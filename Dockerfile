@@ -11,5 +11,5 @@ COPY . .
 RUN yarn client-install
 RUN yarn build-client
 
-EXPOSE 3000
+EXPOSE 8080
 CMD [ "node", "index.js" ]

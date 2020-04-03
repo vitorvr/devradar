@@ -8,7 +8,7 @@ const app = express();
 const ip = process.env.IP || '0.0.0.0';
 const port = process.env.PORT || 8080;
 const mongodbUrl =
-  'mongodb+srv://omnistack:omnistack@cluster0-dgwn0.mongodb.net/devradar?retryWrites=true&w=majority';
+  '<mongo>';
 
 const mongodbConnOpts = {
   useNewUrlParser: true,
